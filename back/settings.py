@@ -50,6 +50,7 @@ INSTALLED_APPS = (
 
     # My applications
     'crm',
+    'products',
 
     # Tests
     # 'factory',
