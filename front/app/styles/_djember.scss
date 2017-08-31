@@ -1,0 +1,513 @@
+/** Other **/
+$table-inverse-bg:                   $gray-dark !default;
+$table-inverse-color:                $white !default;
+$glyphicon-color:                    $brand-info !default;
+$breadcrumb-separator:               '/' !default;;
+/** Inputs **/
+$label-font-weight:                  normal !default;
+$label-required-font-weight:         bold !default;
+$label-required-star-display:        initial !default;
+$label-required-star-color:          $brand-danger !default;
+$required-bg:                        lighten($brand-primary, 35%) !default;
+$form-padding:                       0 !default;
+$disabled-color:                     mix($gray-light, $gray-lighter, 70) !default;
+$max-tomany-height:           450px;
+
+td > div > .form-group {
+  margin-bottom: 0;
+  min-height: 15px !important;
+}
+
+.djember-main > div {
+  padding: $form-padding;
+}
+
+.wide.col-xs-12 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.pull-right.add-button {
+  margin-right: 15px;
+}
+
+.pull-left > .fa-trash {
+  margin-right: 5px;
+}
+
+.glyphicon {
+  color: $glyphicon-color;
+  &:hover {
+    color: $gray;
+  }
+}
+
+table.tomany-slide {
+  margin-bottom: $grid-gutter-width / 3;
+}
+
+table.table table.table {
+  margin:0 !important;
+  tr.inverse {
+    font-size: 100% !important;
+    th {
+      padding: 0 0 0 5px !important;
+    }
+  }
+}
+
+.tomany-table,
+.tomany-stack {
+  table.tomany {
+    tbody {
+      max-height: $max-tomany-height;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    // > thead,
+    // > tfoot,
+    tr,
+    > tbody {
+      display: block;
+    }
+
+    td,
+    th {
+      display: inline-block;
+    }
+
+    tr {
+      // display: flex; (applied later by js)
+      flex-wrap: nowrap;
+    }
+
+    td, th {
+      flex: 0;
+      padding-left: $grid-gutter-width / 10;
+      padding-right: $grid-gutter-width / 10;
+
+      &.field,
+      &.fieldname {
+        flex: 1;
+      }
+    }
+
+    tr {
+      width: calc(100% - 15px);
+    }
+
+    thead {
+      tr.inverse th {
+        width: 100%;
+        flex: 1;
+      }
+
+      tr.headers th {
+        white-space: nowrap;
+      }
+    }
+
+    > tfoot > tr {
+      > td {
+        width: 100%;
+        flex: 1;
+
+        table tr {
+          width: 100%;
+          white-space: nowrap;
+
+          div {
+            flex: 1;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.actions {
+  text-align: right;
+  margin-bottom: $grid-gutter-width / 2;
+  a {
+    margin: 0 $grid-gutter-width / 8;
+  }
+
+  div {
+    display: inline-block;
+  }
+}
+
+.bulk-actions {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: $grid-gutter-width / 2;
+  > .input-group {
+    width: auto;
+    padding-right: 105px;
+    .input-group-addon {
+      opacity: 1;
+      &.btn-primary {
+        background-color: $btn-primary-bg;
+        color: $btn-primary-color;
+        border: $btn-primary-border;
+      }
+      &.btn-default {
+        background-color: $btn-default-bg;
+        color: $btn-default-color;
+        border: $btn-default-border;
+      }
+      &.btn-success {
+        background-color: $btn-success-bg;
+        color: $btn-success-color;
+        border: $btn-success-border;
+      }
+      &.btn-info {
+        background-color: $btn-info-bg;
+        color: $btn-info-color;
+        border: $btn-info-border;
+      }
+      &.btn-warning {
+        background-color: $btn-warning-bg;
+        color: $btn-warning-color;
+        border: $btn-warning-border;
+      }
+      &.btn-danger {
+        background-color: $btn-danger-bg;
+        color: $btn-danger-color;
+        border: $btn-danger-border;
+      }
+      &[disabled] {
+        opacity: .7;
+      }
+    }
+  }
+}
+
+a[role="button"]:hover {
+  text-decoration: none;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+th .checkbox, td .checkbox, .checkbox .checkbox {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+th .checkbox, td .checkbox {
+  margin-bottom: 0;
+}
+
+td .form-group, td .input-group {
+  margin-bottom: 0;
+  min-height: 15px !important;
+  > .col-xs-12 {
+    padding-left:             0;
+    padding-right:            0;
+  }
+}
+
+tr.inverse {
+  background-color: $table-inverse-bg;
+  color: $table-inverse-color;
+  font-size: 120%;
+  th {
+    padding: $grid-gutter-width / 6 0 $grid-gutter-width / 6 $grid-gutter-width / 3;
+  }
+  a, a:visited {
+    color: $table-inverse-color;
+  }
+}
+th.inverse {
+  background-color: $table-inverse-bg;
+  color: $brand-primary;
+  font-weight: normal;
+  padding: $grid-gutter-width / 6;
+}
+
+th .fa-sort, th .fa-sort-asc, th .fa-sort-desc {
+  color: $brand-info;
+}
+
+.djember {
+  display: flex;
+  > div:nth-of-type(2) {
+    flex: 1;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .filters {
+    margin-top: $grid-gutter-width;
+  }
+}
+
+.flash {
+  position: fixed;
+  right: $grid-gutter-width;
+  bottom: $grid-gutter-width * 2.5;
+  width: auto !important;
+  max-width: 25%;
+  min-width: 200px;
+}
+
+fieldset > div > fieldset {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.stretch-row {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.innerSlide {
+  padding-right: $grid-gutter-width / 2;
+  padding-left: $grid-gutter-width / 2;
+}
+
+.default-liquid-destination {
+  z-index: 2000 !important;
+}
+
+#ember-basic-dropdown-wormhole > .ember-basic-dropdown-content {
+  z-index: 3000 !important;
+}
+
+input[required], .required div.ember-power-select-trigger, textarea[required] {
+  background-color: $required-bg;
+}
+
+textarea.form-control {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  margin: $grid-gutter-width / 2 0;
+  .btn {
+    margin: 0 $grid-gutter-width / 8;
+  }
+}
+.modal-lg {
+  @media (max-width: $screen-lg - 1) {
+    width: 100% !important;
+  }
+  @media (min-width: $screen-lg) {
+    width: 90% !important;
+  }
+}
+
+.translation-flag {
+  border-radius: $border-radius-base;
+  z-index: 10;
+}
+
+.markdown button.translation-flag {
+  top: 0 !important;
+  z-index:                    10;
+}
+
+.side-by-side {
+  position: relative;
+  .markdown {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    border: 1px solid $gray-light;
+    > .ember-view {
+      overflow-y: scroll;
+      max-height: 100%;
+    }
+  }
+  .textarea {
+    left: 50%;
+  }
+}
+
+.flag16 {
+  background-image: url(/assets/images/flags16.png) !important;
+}
+
+.flag32 {
+  background-image: url(/assets/images/flags32.png) !important;
+}
+
+fieldset .form-group {
+  min-height: $grid-gutter-width * 1.5;
+  margin-bottom: 0;
+
+  &.readonly > div {
+    border: 1px solid darken($input-border, 10);
+    background-color: $disabled-color;
+    > div {
+      margin-top: 10px;
+      min-height: 1.5em;
+    }
+  }
+}
+
+table.tomany {
+  .form-group.readonly > div {
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.spacer-top {
+  label {
+    margin-top: $grid-gutter-width / 3;
+  }
+}
+
+.form-group {
+  label {
+    margin-top: $grid-gutter-width / 3;
+  }
+  .checkbox label {
+    margin-top: 0;
+  }
+}
+
+.translated {
+  margin-top: 36px;
+}
+
+td .translated {
+  margin-top: 0;
+}
+
+.row.actions {
+  padding-right: $grid-gutter-width / 3;
+  margin-bottom: $grid-gutter-width / 2;
+}
+
+th.fieldname {
+  text-align: center;
+}
+
+td.field, td.action, td.select {
+  vertical-align: middle !important;
+  .readonly tr {
+    float:                    left;
+    display:                  inline-block;
+    ::after {
+      content:                ",";
+      margin-right:           .2em;
+    }
+    &:last-child {
+      ::after {
+        display:              none;
+      }
+    }
+  }
+}
+
+label, th.fieldname {
+  font-weight: $label-font-weight;
+  .required  &, &.required {
+    font-weight: $label-required-font-weight;
+  }
+  .required  &,
+  &.required {
+    font-weight:              $label-required-font-weight;
+  }
+  &::after {
+    font-weight: normal;
+  }
+  sup {
+    font-size: 100%;
+    top: -3px;
+    display: $label-required-star-display;
+    color: $label-required-star-color;
+    font-weight: bolder;
+  }
+}
+
+.breadcrumb li + li::before {
+  content: $breadcrumb-separator;
+}
+
+.nav-tabs li.error {
+  background-color:           $state-danger-bg;
+  a {
+    color:                    $brand-danger;
+  }
+}
+
+.tab-content {
+  padding-top: $grid-gutter-width / 3;
+}
+
+.modal-dialog {
+  margin: 0;
+}
+
+.readonly .checkbox {
+  label:before {
+    display: none;
+  }
+
+  .fa {
+    margin-top: 22px;
+  }
+}
+
+tr.deleted, fieldset.deleted {
+  color: $gray-light !important;
+  * {
+    text-decoration: line-through !important;
+    text-decoration-color: $black !important;
+  }
+}
+
+.change-form .formatting {
+  width: 100%;
+  height: 2 * $grid-gutter-width;
+  margin-bottom: -1.65 * $grid-gutter-width;
+
+  &.info {
+    background-color: darken($state-info-bg, 10);
+  }
+
+  &.success {
+    background-color: darken($state-success-bg, 10);
+  }
+
+  &.warning {
+    background-color: darken($state-warning-bg, 10);
+  }
+
+  &.danger {
+    background-color: darken($state-danger-bg, 10);
+  }
+
+  &.incative {
+    background-color: $gray-light;
+  }
+}
+
+tr.incative {
+  background-color: $gray;
+}
+
+
+/* Simple MDE */
+
+.editor-toolbar.fullscreen {
+  position: relative !important;
+}
+
+.CodeMirror-fullscreen {
+  position: relative !important;
+  top: 0 !important;
+}
+
+.editor-preview-side {
+  position: absolute !important;
+  bottom: 32px !important;
+}

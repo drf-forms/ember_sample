@@ -1,0 +1,17 @@
+
+{{change-list
+  model_name=(concat model.app_name '/' model.model_name)
+  label=model.model_name
+  app_name=model.app_name
+  fields=model.meta.fields
+  list_display=model.meta.list_display
+  list_editable=model.meta.list_editable
+  filter_fields=model.meta.filter_fields
+  ordering_fields=model.meta.ordering_fields
+  search_enabled=model.meta.search_enabled
+  changeFormRoute='djember.form'
+  sortableBy=model.meta.sortable_by
+  custom_actions=model.meta.custom_actions
+  bulk_actions=model.meta.bulk_actions
+}}
+

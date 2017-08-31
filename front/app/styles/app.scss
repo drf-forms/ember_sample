@@ -1,0 +1,20 @@
+/** Mandatory variables **/
+$white:                              #ECEFF1;
+$black:                              #263238;
+$fa-font-path:                       "../assets/fonts/fontawesome";
+$icon-font-path:                     "../assets/fonts/bootstrap/";
+$screen-xxs:                         360px;
+$screen-xxxs:                        280px;
+
+@import "django_variables";
+@import "bootstrap/variables";
+// @import "material";
+@import "bootstrap";
+@import "fontawesome";
+@import "mixins";
+@import "awesome-bootstrap-checkbox";
+@import "bootstrap-power-select";
+@import "django";
+@import "site";
+@import "djember";
+@import "pod-styles";

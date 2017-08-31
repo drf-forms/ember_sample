@@ -1,0 +1,104 @@
+*[data-ember-action] {
+  cursor: pointer;
+}
+
+body > div.ember-view {
+  display:                    flex;
+  min-height:                 100vh;
+  flex-direction:             column;
+  
+  main {
+    padding-top:              $navbar-height + $grid-gutter-width / 2;
+    flex:                     1;
+  }
+}
+
+.main-nav {
+  button {
+    margin:                   $grid-gutter-width / 2;
+  }
+  
+  .navbar-header > div.ember-view {
+    float:                    left;
+    @media(max-width: ($screen-xs-max + $screen-xs) / 2) {
+      button {
+        margin-left:          0;
+        margin-right:         0;
+        padding-right:        0;
+      }
+    }
+  }
+  
+  .navbar-brand {
+    font-size:                200%;
+    margin-top:               5px;
+    @media(max-width: $screen-xxs) {
+      display:                none;
+    }
+  }
+}
+
+@media(max-width: $screen-md-max) {
+  .navbar-right {
+    float:                    right !important;
+    margin-right:             - $grid-gutter-width / 2;
+  }
+  .navbar-header {
+    float:                    left;
+  }
+}
+
+footer > nav.navbar {
+  margin-bottom:              0;
+  border-top:                 1px solid $navbar-default-bg;
+
+  li {
+    span.separator {
+      color:                  $brand-primary;
+      padding-top:            $grid-gutter-width * 2 / 3;
+      display:                inline-block;
+    }
+    
+    a {
+      padding:                $grid-gutter-width / 2 $grid-gutter-width / 6;
+    }
+  }
+  
+  @media (min-width: $screen-xxxs + 1) and (max-width: $screen-md-max) {
+    .navbar-nav > li {
+      float:                  left;
+    }
+  }
+  @media (max-width: $screen-xxxs) {
+    .navbar-right {
+      float:                  none !important;
+      width:                  100%;
+      margin-left:            10px;
+      
+      > li {
+        text-align:           center;
+      }
+    }
+  }
+  
+  @media(max-width: $screen-xxs) {
+    li span.separator {
+      display:                none;
+    }
+  }
+  
+  div.navbar {
+    margin-right:             $grid-gutter-width / 2;     
+    margin-bottom:            0;
+  }
+}
+
+.menu-dropdown {
+  float:                      left;
+}
+
+.loading {
+  width:                      100%;
+  text-align:                 center;
+  padding-top:                $grid-gutter-width;
+}

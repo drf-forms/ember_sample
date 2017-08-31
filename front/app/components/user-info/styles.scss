@@ -1,0 +1,21 @@
+& {
+  form {
+    text-align:                  center;
+  }
+  
+  .login-dropdown .dropdown-menu {
+    padding:                     $grid-gutter-width / 2 $grid-gutter-width / 2;
+    min-width:                   225px;
+  }
+  
+  .login-submit {
+    margin:                      0;
+  }
+  
+  span.user-info {
+    color:                       $white;
+    @media(max-width: ($screen-xs-max + $screen-xs) / 2) {
+      display:                   none;
+    }
+  }
+}

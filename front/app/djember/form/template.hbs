@@ -1,0 +1,13 @@
+
+{{change-form
+  model_name=(concat model.app_name '/' model.model_name)
+  id=model.id
+  fieldsets=model.meta.fieldsets
+  saveTwice=model.meta.save_twice
+  sortableBy=model.meta.sortable_by
+  changeListRoute='djember.list'
+  changeFormRoute='djember.list'
+  languages=model.meta.languages
+  custom_actions=model.meta.custom_actions
+}}
+

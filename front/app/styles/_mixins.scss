@@ -1,0 +1,26 @@
+.btn-hamburger {
+  background-color:                    transparent;
+  .icon-bar {
+    display:                           block;
+    width:                             $grid-gutter-width;
+    height:                            4px;
+    border-radius:                     1px;
+    background-color:                  $white;
+  }
+  
+  .icon-bar + .icon-bar {
+    margin-top:                        4px;
+  }
+  
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  &:focus:active {
+    .icon-bar {
+      background-color:               darken($white, 10%);
+    }
+  }
+
+}

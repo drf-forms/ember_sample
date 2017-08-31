@@ -1,0 +1,19 @@
+
+<div class="dropdown menu-dropdown">
+  <button class="btn btn-hamburger" data-toggle="dropdown">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <ul class="dropdown-menu">
+    {{#each sections as |section|}}
+      <li>
+        {{#link-to section.route}}{{section.title}}{{/link-to}}
+      </li>
+    {{/each}}
+    <li><a href="{{django_host}}/admin/" target="_blank">Django admin</a></li>
+    <li><a href="{{django_host}}/{{api_namespace}}/" target="_blank">Django REST api</a></li>
+  </ul>
+</div>
+

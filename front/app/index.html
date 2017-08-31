@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+  <head>
+  <script type='text/javascript'>window.addEventListener('load',function(e){window.applicationCache.addEventListener('updateready',function(e){if (window.applicationCache.status==window.applicationCache.UPDATEREADY){window.applicationCache.swapCache();window.location.reload();}},false);},false);</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Djember Sample</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for "head"}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/djember-sample.css">
+
+    <style>
+      /* Spinner CSS from http://tobiasahlin.com/spinkit/ */
+      .spinner {
+        margin: 100px auto 0;
+        width: 70px;
+        text-align: center;
+      }
+  
+      .spinner > div {
+        width: 18px;
+        height: 18px;
+        background-color: #333;
+  
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+      }
+  
+      .spinner .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+  
+      .spinner .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+  
+      @-webkit-keyframes sk-bouncedelay {
+        0%, 80%, 100% { -webkit-transform: scale(0) }
+        40% { -webkit-transform: scale(1.0) }
+      }
+    </style>
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    <div class="ember-load-indicator">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+    {{content-for "body"}}
+
+    <script src="assets/vendor.js"></script>
+    <script src="assets/djember-sample.js"></script>
+
+    {{content-for "body-footer"}}
+  </body>
+</html>
+
+

@@ -1,0 +1,132 @@
+/** Bootstrap overrides **/
+$navbar-border-radius:               0;
+$navbar-default-border:              0;
+$navbar-inverse-border:              0;
+$alert-border-radius:                0;
+$state-success-border:               rgba(0,0,0,0);
+$state-danger-border:                rgba(0,0,0,0);
+$state-warning-border:               rgba(0,0,0,0);
+$state-info-border:                  rgba(0,0,0,0);
+$btn-default-border:                 rgba(0,0,0,0);
+$btn-primary-border:                 rgba(0,0,0,0);
+$btn-success-border:                 rgba(0,0,0,0);
+$btn-info-border:                    rgba(0,0,0,0);
+$btn-warning-border:                 rgba(0,0,0,0);
+$btn-danger-border:                  rgba(0,0,0,0);
+$btn-border-radius-base:             0;
+$btn-border-radius-large:            0;
+$btn-border-radius-small:            0;
+
+.material-nav {
+  -webkit-box-shadow:                0px 2px 2px $gray-light;
+     -moz-box-shadow:                0px 2px 2px $gray-light;
+          box-shadow:                0px 2px 2px $gray-light;
+}
+
+.material-img {
+  -webkit-box-shadow:                1px 1px 1px $gray-light;
+     -moz-box-shadow:                1px 1px 1px $gray-light;
+          box-shadow:                1px 1px 1px $gray-light;
+}
+
+.fa, .glyphicon {
+  -webkit-text-shadow:               1px 1px 2px $gray-light;
+     -moz-text-shadow:               1px 1px 2px $gray-light;
+          text-shadow:               1px 1px 2px $gray-light;
+}
+
+.alert {
+  -webkit-box-shadow:                2px 2px 2px $gray-light;
+     -moz-box-shadow:                2px 2px 2px $gray-light;
+          box-shadow:                2px 2px 2px $gray-light;
+}
+
+.btn {
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  &:focus:active {
+    outline:                         none !important;
+    -webkit-box-shadow:              none !important;
+       -moz-box-shadow:              none !important;
+            box-shadow:              none !important;
+  }
+}
+
+.dropdown-menu {
+  /* FIXME: We should not have to use !important */
+  -webkit-box-shadow:                4px 4px 4px $gray-light !important;
+     -moz-box-shadow:                4px 4px 4px $gray-light !important;
+          box-shadow:                4px 4px 4px $gray-light !important;
+          
+  &:before {
+    content:                         '';
+    display:                         inline-block;
+    border-left:                     7px solid transparent;
+    border-right:                    7px solid transparent;
+    border-bottom:                   7px solid $dropdown-bg;
+    position:                        absolute;
+    top:                             -7px;
+    left:                            9px;
+  }
+  &.from-right:before {
+    left:                            auto;
+    right:                           9px;
+  }
+  &:after {
+    content:                         '';
+    display:                         inline-block;
+    border-left:                     6px solid transparent;
+    border-right:                    6px solid transparent;
+    border-bottom:                   6px solid $dropdown-bg;
+    position:                        absolute;
+    top:                             -6px;
+    left:                            10px;
+  }
+  &.from-right:after {
+    left:                            auto;
+    right:                           10px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .navbar-right .dropdown-menu {
+    left:                            auto !important;
+    right:                           $grid-gutter-width / 2 !important;
+  }
+  ul.dropdown-menu {
+    right:                           auto !important;
+    left:                            $grid-gutter-width !important;
+  }
+}
+@media (max-width: $screen-xs-max) {
+  .dropdown-menu.from-right {
+    right:                           0 !important;
+    left:                            auto !important;
+  }
+  ul.dropdown-menu {
+    left:                            $grid-gutter-width / 2 !important;
+  }
+}
+@media (max-width: 300px) {
+  ul.dropdown-menu {
+    left:                            0 !important;
+    right:                           auto !important;
+  }
+  .dropdown-menu {
+    min-width:                       0 !important;
+    width:                           100vw !important;
+  }
+}
+
+ul {
+  list-style-type:                   none;
+  padding-left:                      $grid-gutter-width / 2;
+}
+
+.material-card {
+  @extend .alert;
+  background-color:                  lighten($body-bg, 5%);
+}

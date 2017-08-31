@@ -1,0 +1,38 @@
+{{ember-load-remover}}
+<nav class="navbar navbar-default navbar-fixed-top main-nav material-nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      {{main-menu sections=model}}
+      <a class="navbar-brand" href="{{href-to 'index'}}">Djember Sample</a>
+    </div>
+    <div class="navbar-right">
+      {{user-info right=true}}
+    </div>
+  </div>
+</nav>
+<main>
+  {{liquid-outlet}}
+</main>
+<footer>
+  <nav class="navbar navbar-inverse">
+    <div class="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><span class="separator">Built with</span></li>
+        <li><a href="http://www.djangoproject.com/" target="_blank"><img class="material-img" src="http://pixel-cookers.github.io/built-with-badges/django/django-short-flat.png" border="0" alt="Built with Django." title="Built with Django." /></a></li>
+        <li><span class="separator">,</span></li>
+        <li><a href="http://emberjs.com/" target="_blank"><img class="material-img" src="http://pixel-cookers.github.io/built-with-badges/ember/ember-short-flat.png" border="0" alt="Built with Ember." title="Built with Ember." /></a></li>
+        <li><span class="separator">&amp;</span></li>
+        <li><a href="http://getbootstrap.com/" target="_blank"><img class="material-img" src="http://pixel-cookers.github.io/built-with-badges/bootstrap/bootstrap-short-flat.png" border="0" alt="Built with Bootstrap." title="Built with Ember." /></a></li>
+      </ul>
+    </div>
+  </nav>
+</footer>
+{{#if (gt flashMessages.queue.length 0)}}
+  <div class="flash">
+    {{#each flashMessages.queue as |flash|}}
+      {{flash-message flash=flash}}
+    {{/each}}
+  </div>
+{{/if}}
+<div id="ember-basic-dropdown-wormhole"></div>
+

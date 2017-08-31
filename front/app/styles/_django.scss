@@ -1,0 +1,46 @@
+g.btn-success.add,
+.btn-default.list {
+  background-color: transparent;
+  color:            $link-color;
+  border:           0;
+
+  &.add i {
+    color:          $brand-success;
+  }
+
+  &.list i {
+    color:          $brand-warning;
+  }
+}
+
+.add-button .btn-success {
+  border-radius:    $grid-gutter-width / 2;
+  border-color:     $gray-light;
+  background-color: $gray-light;
+  color:            $white;
+
+  i {
+    float:          right;
+    margin-left:    10px;
+    margin-top:     2px;
+  }
+}
+
+// button i.fa {
+//   display: none;
+// }
+
+.breadcrumb {
+  .home {
+    margin-top:     65px;
+  }
+
+  li a {
+    color:          $white;
+  }
+}
+
+main.home {
+  margin:           0 $grid-gutter-width;
+  padding-top:      0 !important;
+}

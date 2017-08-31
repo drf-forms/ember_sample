@@ -1,0 +1,47 @@
+/** Bootstrap overrides **/
+/*** Typography ***/
+$font-size-base:                     16px;
+/*** Colors ***/
+$body-bg:                            $white;
+$brand-primary:                      #009688;
+$brand-danger:                       #AD1457;
+$brand-warning:                      #FF5722;
+$brand-info:                         #3F51B5;
+$brand-success:                      #388E3C;
+$gray-lighter:                       #B0BEC5;
+$gray-light:                         #78909C;
+$gray:                               #607D8B;
+$gray-dark:                          #546E7A;
+$gray-darker:                        #37474F;
+$state-success-text:                 $brand-success;
+$state-success-bg:                   #E8F5E9;
+$state-danger-text:                  $brand-danger;
+$state-danger-bg:                    #FCE4EC;
+$state-warning-text:                 $brand-warning;
+$state-warning-bg:                   #FBE9E7;
+$state-info-text:                    $brand-info;
+$state-info-bg:                      #C5CAE9;
+/*** Navbars ***/
+/**** Default ****/        
+$navbar-default-bg:                  $brand-primary;
+$navbar-default-color:               $white;
+$navbar-default-link-color:          $navbar-default-color;
+$navbar-default-link-hover-color:    $gray-dark;
+/**** Inverse ****/        
+$navbar-inverse-bg:                  $body-bg;
+$navbar-inverse-color:               $brand-primary;
+$navbar-inverse-link-color:          $navbar-inverse-color;
+$navbar-inverse-link-hover-color:    darken($brand-primary, 15%);
+/*** DropDowns ***/
+$dropdown-bg:                        #00796B;
+$dropdown-border:                    $dropdown-bg;
+$dropdown-fallback-border:           $dropdown-bg;
+$dropdown-link-color:                $white;
+/*** Borders ***/
+$border-radius-base:                 0;
+$border-radius-large:                0;
+$border-radius-small:                0;
+$input-border-focus:                 #80CBC4;
+/*** Djember ***/
+$ember-power-select-highlighted-color: $white;
+$required-bg:                        mix($gray-lighter, lighten($brand-primary, 50%), 40);

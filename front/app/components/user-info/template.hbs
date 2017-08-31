@@ -1,0 +1,32 @@
+
+{{#if session.isAuthenticated}}
+  <span class="user-info">Welcome {{session.currentUser.username}}</span>
+  <button class="btn btn-danger" {{action 'invalidate' on='click'}}><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Sign out</button>
+{{else}}
+  <div class="dropdown login-dropdown">
+    <button class="btn btn-success" data-toggle="dropdown">
+      <i class="fa fa-user"></i>&nbsp;&nbsp;Sign in
+    </button>
+    <div class="dropdown-menu {{if right 'from-right'}}">
+      {{#if session.loginError}}
+        <div class="alert alert-danger login-error">
+          <i class="fa fa-exclamation"></i>&nbsp;&nbsp;{{session.loginError}}
+        </div>
+      {{/if}}
+      <form class="col-xs-12 form-horizontal login-form" {{action 'authenticate' on='submit'}}>
+        <div class="form-group">
+          <div class="controls">
+            {{input id='login' placeholder='Username' value=login class='form-control'}}
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="controls">
+            {{input id='password' placeholder='Password' value=password type='password' class='form-control'}}
+          </div>
+        </div>
+        <button type="submit" class="btn btn-default login-submit"><i class="fa fa-sign-in"></i>&nbsp;&nbsp;Go</button>
+      </form>
+    </div>
+  </div>
+{{/if}}
+
