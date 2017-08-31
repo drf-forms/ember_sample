@@ -48,6 +48,9 @@ INSTALLED_APPS = (
     # Celery
     #'kombu.transport.django.KombuAppConfig',
 
+    # My applications
+    'crm',
+
     # Tests
     # 'factory',
     # 'django_jenkins',
