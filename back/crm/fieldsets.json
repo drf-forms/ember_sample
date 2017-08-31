@@ -1,0 +1,141 @@
+{
+  "Contact": [
+    {"name": "company"},
+    {"name": "short_name"},
+    {"name": "long_name"},
+    {
+      "name": "contactmechanisms",
+      "label": "Contact Mechanisms",
+      "widget": "tomany-table",
+      "extra": {
+        "sortableBy": "position"
+      },
+      "fields": [
+        {"name": "mechanism_type"},
+        {"name": "value"}
+      ]
+    }
+  ],
+  "Company": [
+    {"name": "name"},
+    {"name": "website"},
+    {
+      "widget": "fieldset",
+      "innerClass": "col-sm-6",
+      "fields": [
+        {
+          "name": "default_contact",
+          "horiClass": "col-sm-6",
+          "inputClass": "col-sm-6",
+          "extra": {
+            "property_path": "employees",
+            "label": "long_name",
+            "expand": true,
+            "autoComplete": true
+          },
+          "fields": [
+            {
+              "name": "short_name",
+              "horiClass": "hidden",
+              "inputClass": "col-xs-12"
+            }, {
+              "name": "default_mechanism",
+              "horiClass": "hidden",
+              "inputClass": "col-xs-12"
+            }
+          ]
+        }, {
+          "widget": "fieldset",
+          "innerClass": "col-sm-6",
+          "fields": [
+            {"name": "is_client"},
+            {"name": "is_supplier"}
+          ]
+        }
+      ]
+    }, {
+      "widget": "tabset",
+      "tabs": [
+        {
+          "label": "CRM",
+          "fields": [
+            {
+              "name": "segments",
+              "widget": "manytomany-select",
+              "extra": {
+                "allowAdd": true
+              }
+            }, {
+              "name": "employees",
+              "widget": "tomany-slide",
+              "fields": [
+                {
+                  "name": "short_name",
+                  "class": "col-lg-4 col-md-12",
+                  "horiClass": "col-lg-4 col-sm-3",
+                  "inputClass": "col-lg-8 col-sm-9"
+                }, {
+                  "name": "long_name",
+                  "class": "col-lg-8 col-md-12",
+                  "horiClass": "col-lg-2 col-sm-3",
+                  "inputClass": "col-lg-10 col-sm-9"
+                }, {
+                  "name": "contactmechanisms",
+                  "label": "Contact Mechanisms",
+                  "widget": "tomany-table",
+                  "extra": {
+                    "sortableBy": "position"
+                  },
+                  "fields": [
+                    {
+                      "name": "mechanism_type",
+                      "label": "Type"
+                    },
+                    {"name": "value"}
+                  ]
+                }
+              ]
+            }
+          ]
+        }, {
+          "label": "Accounting",
+          "fields": [
+            {
+              "name": "invoices",
+              "widget": "tomany-table",
+              "readonly": true,
+              "fields": [
+                {"name": "id"},
+                {
+                  "name": "invoice_type",
+                  "label": "Type"
+                }, {
+                  "name": "total",
+                  "label": "Total"
+                },
+                {"name": "state"}
+              ],
+              "extra": {
+                "allowOpen": true,
+                "openTarget": "dialog"
+              }
+            }
+          ]
+        }, {
+          "label": "Notes",
+          "fields": [
+            {
+              "name": "notes",
+              "horiClass": "hidden",
+              "inputClass": "col-xs-12 description",
+              "widget": "textarea",
+              "extra": {
+                "rows": 12
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
