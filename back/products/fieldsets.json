@@ -1,0 +1,48 @@
+{
+ "Product": [
+    {
+      "name": "picture",
+      "class": "col-md-3 col-sm-6 col-xs-12 clearfix",
+      "horiClass": "col-md-12 col-sm-3 col-xs-12",
+      "inputClass": "col-md-12 col-sm-9 col-xs-12",
+      "extra": {
+        "clearable": true
+      }
+    }, {
+      "widget": "fieldset",
+      "class": "col-md-9 col-sm-6 col-xs-12",
+      "fields": [
+        {"name": "name"},
+        {
+          "name": "category",
+          "extra": {
+            "allowAdd": true
+          }
+        },
+        {"name": "sale_type"},
+        {
+          "name": "period",
+          "extra": {
+            "display_condition": {
+              "operator": "eq",
+              "property_path": "sale_type",
+              "value": "s",
+              "required": true
+            }
+          }
+        },
+        {"name": "price"}
+      ]
+    }, {
+      "name": "description",
+      "widget": "markdown",
+      "horiClass": "col-xs-12",
+      "inputClass": "col-xs-12",
+      "class": "spacer-top",
+      "extra": {
+        "rows": 7,
+        "sideBySide": true
+      }
+    }
+  ]
+}
