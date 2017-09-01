@@ -1,0 +1,14 @@
+{{! template-lint-disable }}
+<div class="col-sm-6 col-xs-12 description">
+  {{markdown-to-html "
+Actions are also provided by that same `OPTIONS` call. There are 2 types of actions:
+
+- `custom_actions`: Those are actions that will be available on each record. If they
+  have an active `allowBulk` flag, those actions will also be available as bulk actions.
+- `bulk_actions`: Those are actions that will be available for (several) selected
+  record.
+  "}}
+</div>
+<div class="col-sm-6 col-xs-12">
+  {{options-getter value=model.jsons.actions}}
+</div>

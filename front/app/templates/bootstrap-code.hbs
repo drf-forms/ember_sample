@@ -1,0 +1,12 @@
+{{! template-lint-disable }}
+{{markdown-to-html "
+This application was bootstrapped using the
+[cc-djember-experience cookiecutter](https://bitbucket.org/levit_scs/cc_djember_experience).
+
+This gave us a ready-to-use Django API with an Ember frontend, including authentication and 4 routes in the [`djember` directory](https://github.com/drf-forms/ember_sample/blob/master/front/app/djember/).
+
+- `index`: This route is used for the dashboard and use the `app-dasboard` component from `ember-cli-crudities`
+- `app`: This is a \"sub-dashboard\" route constructed in the same way as `index`
+- `list`: This route is used to view a list of records of the same type. It uses `ember-cli-crudities`'s `change-route` mixin as well as its `change-list` component.
+- `form`: This route is used to view and edit the details of a record. It uses `ember-cli-crudities`'s `change-route` mixin as well as its `change-form` component.
+"}}

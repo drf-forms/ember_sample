@@ -1,0 +1,48 @@
+{{! template-lint-disable }}
+<div class="description">
+  {{markdown-to-html "
+- 3 new applications and 7 new models were created in Django: 
+  [crm/models.py](https://github.com/drf-forms/ember_sample/blob/master/back/crm/models.py),
+  [products/models.py](https://github.com/drf-forms/ember_sample/blob/master/back/products/models.py) and 
+  [accounting/models.py](https://github.com/drf-forms/ember_sample/blob/master/back/accounting/models.py)
+- Translations for `products` models where created (using [django-modeltranslation](http://django-modeltranslation.readthedocs.io/en/latest/))
+	[products.translation.py](https://github.com/drf-forms/ember_sample/blob/master/back/products/translation.py)
+- A few custom endpoints were created for some of the models in each applications:
+- Endpoints for each model were registered
+  "}}
+
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      {{markdown-to-html "  - `accounting`"}}
+      {{#code-block language='python'}}
+{{partial 'accounting-endpoints'}}
+      {{/code-block}}
+    </div>
+    <div class="col-md-6 col-sm-12">
+      {{markdown-to-html " - `crm`"}}
+      {{#code-block language='python'}}
+{{partial 'crm-endpoints'}}
+      {{/code-block}}
+    </div>
+    <div class="col-md-6 col-sm-12">
+      {{markdown-to-html "  - `products`"}}
+      {{#code-block language='python'}}
+{{partial 'products-endpoints'}}
+      {{/code-block}}
+    </div>
+  </div>
+  {{markdown-to-html "
+- If you are curious about the form structures, you can also take a look at the
+  fieldsets definitions which have been declared in separate `json` files (for
+  readability's sake):
+  [crm](https://github.com/drf-forms/ember_sample/blob/master/back/crm/fieldsets.json),
+  [products](https://github.com/drf-forms/ember_sample/blob/master/back/products/fieldsets.json),
+  [accounting](https://github.com/drf-forms/ember_sample/blob/master/back/accounting/fieldsets.json).
+- Finally, before moving-on to the frontend, 2 endpoints were statically exported to
+  frontend models (so that they can be customized) like this:
+
+  `./manage.py export accounting/invoices`
+
+  `./manage.py export accounting/invoicelines`
+  "}}
+</div>

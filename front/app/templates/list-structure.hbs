@@ -1,0 +1,24 @@
+{{! template-lint-disable }}
+<div class="col-sm-6 col-xs-12">
+  {{markdown-to-html "
+The `change-list` component also gets its structure information from an `OPTIONS` call
+to the related endpoint.
+
+This call returns information quite similar to what you would configure in a Django
+Admin class (`list_display`, `list_editable`, `ordering_fields`, `sortable_by`, ...).
+
+The `change-list` component then puts this information together with the fields
+information (it received it from the same call) to build the records list.
+
+The \"Filters\" pane is also built from information received from this call (
+`filter_fields` and `search_enabled`).
+
+Finally the `change-list` also receives actions from that call, there are 2 kinds of
+actions: `custom_actions` and `bulk_actions`. `Custom_actions` are actions that will be
+performed on a per-record basis; they can also be performed in bulk if `allow_bulk` is
+`true`. `Bulk_actions` are actions that can only be performed in bullk mode.
+  "}}
+</div>
+<div class="col-sm-6 col-xs-12">
+  {{options-getter value=model.jsons.list}}
+</div>

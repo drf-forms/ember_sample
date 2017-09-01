@@ -1,0 +1,8 @@
+& {
+  display: none;
+
+  &.active {
+    padding-top: $grid-gutter-width;
+    display: block;
+  }
+}

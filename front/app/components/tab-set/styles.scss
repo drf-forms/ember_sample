@@ -1,0 +1,8 @@
+& {
+  .nav > li > a {
+    display: flex;
+    .emoji {
+      margin-right: $grid-gutter-width / 2;
+    }
+  }
+}

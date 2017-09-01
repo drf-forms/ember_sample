@@ -1,0 +1,16 @@
+{{! template-lint-disable }}
+<div class="col-sm-6 col-xs-12">
+  {{markdown-to-html "
+  The application structure is provided to the client by the Root API; more specifically,
+  if you make an `OPTIONS` call to the API's root, you'll receive the information
+  on the right.
+
+  This particular dynamic client doesn't use the `endpoints` information, only the
+  `applications` information.
+
+  This is how the [dashboard](/djember) is built.
+  "}}
+</div>
+<div class="col-sm-6 col-xs-12">
+  {{options-getter value=model.jsons.app}}
+</div>

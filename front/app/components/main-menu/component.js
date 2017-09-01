@@ -12,6 +12,6 @@ export default Ember.Component.extend({
     return config.APP.API_NAMESPACE;
   }),
   django_host: computed(() => {
-    return `${window.location.protocol}//${window.location.host.split(':')[0]}:8000`;
+    return `${window.location.protocol}//${window.location.host.split(':')[0]}`;
   })
 });

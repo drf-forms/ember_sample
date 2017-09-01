@@ -1,0 +1,13 @@
+<ul class="nav nav-tabs" role="tablist">
+  {{#each tabs as |tab|}}
+    <li role="presentation" class="{{if (eq tab.id active) 'active'}}">
+      <a role="tab" {{action 'switchTo' tab.id}}>
+        {{#if tab.emoji}}
+          {{tab.emoji}}&nbsp;
+        {{/if}}
+        {{tab.title}}
+      </a>
+    </li>
+  {{/each}}
+</ul>
+{{yield this}}

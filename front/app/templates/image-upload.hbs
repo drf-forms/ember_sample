@@ -1,0 +1,12 @@
+{{! template-lint-disable }}
+<div class="description">
+  {{markdown-to-html "
+- when an image is dragged or selected to the image widget (`form-image` component) in
+  the product form, the widget reads and publishes it as `base64-encoded` data, allowing
+  for direct preview in the browser
+- when the form is saved, this data is sent \"as-is\" to the API, making it possible to
+  use `application/json` encoding instead of having to resort to `multi-part form`
+- on the API side, **DRF-Base64** is able to decode this `base64-encoded` string and 
+  turns it back into a \"real\" file.
+  "}}
+</div>

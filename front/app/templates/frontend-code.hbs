@@ -1,0 +1,32 @@
+{{! template-lint-disable }}
+<div class="description">
+  {{markdown-to-html "
+### For the admin
+
+- The models exported from the backend were customized in order to benefit from live update
+  "}}
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      {{#code-block language='javascript'}}
+{{partial 'invoiceline-js'}}
+      {{/code-block}}
+    </div>
+    <div class="col-md-6 col-sm-12">
+      {{#code-block language='javascript'}}
+{{partial 'invoice-js'}}
+      {{/code-block}}
+    </div>
+  </div>
+  {{markdown-to-html "
+### For the webshop
+
+Aside from creating components and services as in any other Ember application:
+
+- A [`shop/index`](https://github.com/drf-forms/ember_sample/blob/master/front/app/shop/index/)
+  route was created. It uses `ember-cli-crudities`'s `change-route` mixin and `change-list` component. In the case, the `change-list` component is used in its block form.
+- A [`shop/basket`](https://github.com/drf-forms/ember_sample/blob/master/front/app/shop/basket/)
+  route was created. It uses `ember-cli-crudities`'s `change-list` component. In this
+  case with a model stored in `local store` therefore the meta-information cannot be
+  pulled from the backend and is provided directly in `route.js`.
+"}}
+</div>

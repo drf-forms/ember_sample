@@ -1,0 +1,17 @@
+{{! template-lint-disable }}
+<div class="col-sm-6 col-xs-12">
+  {{markdown-to-html "
+As you might have noticed from the statically exported model, there isn't nearly as
+much information about field types in an Ember model as there is in a Django model. So
+where does the client get this information?
+
+Fields information is provided by the api. If you do an `OPTIONS` call on any of the
+api endpoints, you'll receive fields information like the one on the right. This
+information is extracted from the endpoint's serializer and is much more complete
+than the one from the Ember model. This is the information used to render each field
+widget.
+  "}}
+</div>
+<div class="col-sm-6 col-xs-12">
+  {{options-getter value=model.jsons.fields}}
+</div>

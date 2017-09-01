@@ -1,4 +1,92 @@
-<div class="alert alert-success">
-  <h1><i class="fa fa-check text-success"></i>&nbsp;&nbsp;It worked!</h1>
-  <h2>You are now ready to start your Djember Experience!</h2>
-</div>
+{{! template-lint-disable }}
+<ol class="breadcrumb home">
+  <li class="active">🏡 Home</li>
+</ol>
+<main class="container-fluid home">
+  <h2 class="center">
+    🎉&nbsp;Welcome to the Djember Sample application&nbsp;🎉
+  </h2>
+  <div class="description">
+    {{markdown-to-html "
+This application is a sample application for 4 projects:
+
+- [ember-cli-dynamic-model](https://bitbucket.org/levit_scs/ember-cli-dynamic-model)
+- [ember-cli-crudities](http://ember-cli-crudities.readthedocs.io/en/latest/)
+- [DRF-schema-adapter](http://drf-schema-adapter.readthedocs.io/en/latest/)
+- [DRF-Base64](https://bitbucket.org/levit_scs/drf_base64)
+
+### To test the application:
+
+Please make sure to login first using:"}}
+
+    <div class="pull-left oversize">
+      🔐
+    </div>
+
+    {{markdown-to-html "
+- User: `demo`
+- Passphrase: `Passphrase for demo user account`
+
+Then checkout the `Ember admin` section of this site as well as the `Django API`
+(make sure to click the `OPTIONS` button where-ever you can think of).
+
+Feel free to also try the sample webshop!
+
+### How..."}}
+  </div>
+  {{#tab-set tabs=model.tabs active=model.active as |tabset|}}
+    {{#tab-content tabId='work' tabset=tabset}}
+      {{markdown-to-html "This demo is almost entirely a dynamic client.
+Working with a dynamic client means the client must receive all its information from the API.
+There are several types of information provided by the API:"}}
+      {{#tab-set tabs=model.workTabs as |wtabset|}}
+        {{#tab-content tabId='structure' tabset=wtabset}}
+          {{partial 'app-structure'}}
+        {{/tab-content}}
+        {{#tab-content tabId='models' tabset=wtabset}}
+          {{partial 'models-structure'}}
+        {{/tab-content}}
+        {{#tab-content tabId='fields' tabset=wtabset}}
+          {{partial 'fields-structure'}}
+        {{/tab-content}}
+        {{#tab-content tabId='list' tabset=wtabset}}
+          {{partial 'list-structure'}}
+        {{/tab-content}}
+        {{#tab-content tabId='form' tabset=wtabset}}
+          {{partial 'form-structure'}}
+        {{/tab-content}}
+        {{#tab-content tabId='actions' tabset=wtabset}}
+          {{partial 'actions-structure'}}
+        {{/tab-content}}
+      {{/tab-set}}
+    {{/tab-content}}
+    {{#tab-content tabId='built' tabset=tabset}}
+      {{markdown-to-html "This sample application was built in only a few steps."}}
+      {{#tab-set tabs=model.builtTabs as |btabset|}}
+        {{#tab-content tabId='bootstrap' tabset=btabset}}
+          {{partial 'bootstrap-code'}}
+        {{/tab-content}}
+        {{#tab-content tabId='backend' tabset=btabset}}
+          {{partial 'backend-code'}}
+        {{/tab-content}}
+        {{#tab-content tabId='frontend' tabset=btabset}}
+          {{partial 'frontend-code'}}
+        {{/tab-content}}
+      {{/tab-set}}
+    {{/tab-content}}
+    {{#tab-content tabId='images' tabset=tabset}}
+      {{partial 'image-upload'}}
+    {{/tab-content}}
+  {{/tab-set}}
+  <div class="clearfix"></div>
+  <div class="pull-left oversize align-right">
+    👋<br/>
+    ☺️🖥
+  </div>
+  <p></p>
+  And that was it!
+  <br/>
+  <br/>
+  <br/>
+  Happy coding everyone!
+</main>

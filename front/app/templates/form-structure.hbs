@@ -1,0 +1,26 @@
+{{! template-lint-disable }}
+<div class="col-sm-6 col-xs-12 description">
+  {{markdown-to-html "
+As `app-dashboard` and `change-list`, the `change-form` component gets its struture
+information from an `OPTIONS` call the to endpoint it is related to.
+
+This call returns a `fieldsets` information which tells the component about the form
+structure. The value of `fieldsets` is pretty similar to the same property on a Django
+Admin class with two major differences:
+
+- `ember-cli-crudities` fieldsets are nestable 
+- when specifying the list of fields in a fieldset, you can also use it to override
+  default field parameters or provide extra parameters (like the class of the widget
+  or how to limit foreign-key choosable values)
+
+In the same manner as with the `change-list`, the `change-form` component then puts
+this structure information together with the fields information it got from the same
+`OPTIONS` call to deduce how to display the form.
+
+Field information about related models fields depends on another `OPTIONS` call to the
+endpoint corresponding to that model.
+  "}}
+</div>
+<div class="col-sm-6 col-xs-12">
+  {{options-getter value=model.jsons.form}}
+</div>

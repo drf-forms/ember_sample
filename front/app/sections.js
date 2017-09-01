@@ -4,9 +4,11 @@ export default [
     route: 'index',
     opts: {
       path: '/'
-    }
+    },
+    emoji: '🏡'
   }, {
-    title: 'Ember dynamic client',
-    route: 'djember'
+    title: 'Ember admin',
+    route: 'djember',
+    emoji: '🐾'
   }
 ];

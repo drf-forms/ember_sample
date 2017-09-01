@@ -4,7 +4,11 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    'ember-prism': {
+      'theme': 'okaidia',
+      'components': ['python', 'javascript', 'markup'],
+      'plugins': ['line-numbers', 'remove-initial-line-feed', 'copy-to-clipboard']
+    },
     babel: {
       optional: ['es7.decorators']
     }

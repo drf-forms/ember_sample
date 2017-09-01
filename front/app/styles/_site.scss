@@ -102,3 +102,8 @@ footer > nav.navbar {
   text-align:                 center;
   padding-top:                $grid-gutter-width;
 }
+
+.oversize {
+  margin-right: $grid-gutter-width;
+  font-size: 275%;
+}
