@@ -1,0 +1,61 @@
+///** Bootstrap overrides **///
+///*** Colors ***///
+$brand-primary:                        #e25641;
+// $brand-secondary:                      #bdccd4;
+$brand-secondary:                      #dd6a58;
+$brand-danger:                         #e24040;
+$brand-success:                        #3b753b;
+$brand-warning:                        #e58d0d;
+$brand-info:                           #bdccd4;
+$body-bg:                              #fdfdfd;
+$gray-base:                            #000 !default;
+$gray-darker:                          lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:                            lighten($gray-base, 20%) !default;   // #333
+$gray:                                 lighten($gray-base, 33.5%) !default; // #555
+$gray-light:                           lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:                         lighten($gray-base, 93.5%) !default; // #eee
+$text-color:                           #865931;
+//*** Navbars ***//
+//**** Default ****//        
+$navbar-height:                        50px !default;
+$navbar-default-bg:                    $brand-primary;
+$navbar-default-color:                 #f5dd5d;
+$navbar-default-link-color:            $navbar-default-color;
+$navbar-default-link-hover-color:      $gray-dark;
+//**** Inverse ****//        
+$navbar-inverse-bg:                    $body-bg;
+$navbar-inverse-color:                 $brand-primary;
+$navbar-inverse-link-color:            $navbar-inverse-color;
+$navbar-inverse-link-hover-color:      darken($brand-primary, 15%);
+//*** Breadcrumbs ***//
+$breadcrumb-bg:                        mix(darken($text-color, 10), $gray-dark, 40);
+$breadcrumb-color:                     $gray-lighter;
+$breadcrumb-active-color:              $gray-lighter;
+//*** Borders ***//
+$border-radius-base:                   0;
+$border-radius-large:                  6px;
+$border-radius-small:                  3px;
+$input-border-focus:                   $brand-primary;
+//** Buttons **//
+// $btn-default-color:                    #fff;
+$btn-default-bg:                       #bdccd4;
+//$btn-default-border:                   $btn-default-bg;
+$btn-primary-bg:                       mix($brand-primary, $gray-lighter, 85);
+$btn-primary-border:                   $btn-primary-bg;
+$btn-border-radius-base:               4px;
+// $btn-info-border:                    $btn-info-bg;
+$btn-success-border:                   $brand-success;
+$btn-warning-border:                   $brand-warning;
+$btn-danger-border:                    $brand-danger;
+//** Other **//
+$main-padding:                         $navbar-height + 15px 0 0 0;
+$table-inverse-bg:                     $brand-secondary;
+$table-inverse-color:                  #fff;
+$form-padding:                         0 30px;
+$breadcrumb-separator:                 '›';
+//** Inputs **//
+$required-bg:                          #fff;
+$ember-power-select-highlighted-color: #fff;
+$glyphicon-color:                      mix($brand-primary, $gray-darker);
+$label-required-star-display:          none;
+

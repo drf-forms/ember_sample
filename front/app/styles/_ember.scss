@@ -1,0 +1,22 @@
+a.navbar-brand {
+  color: $white !important;
+}
+
+ol.breadcrumb > li {
+  & > a {
+    color: $brand-secondary;
+  }
+}
+
+.fa-shopping-basket {
+  color: $breadcrumb-bg;
+}
+
+.navbar-right span.badge {
+  background-color: $brand-info !important;
+  color: $brand-primary;
+}
+
+.btn {
+  border-radius: 20px !important;
+}
