@@ -51,7 +51,7 @@ class InvoiceEndpoint(Endpoint):
                    pushPayload=True, allowBulk=True,
                    display_condition={'operator': 'eq', 'value': 'open', 'property_path': 'state', })
     def pay(self, request, pk):
-        obj = get_object_or_404(self.endpoint.model, pk=pk)
+        obj = get_object_or_404(self.model, pk=pk)
         obj.state = 'paid'
         obj.save()
         serializer = self.get_serializer(obj)
