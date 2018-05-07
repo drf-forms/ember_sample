@@ -13,7 +13,7 @@ MECHANISM_CHOICES = (
 class Company(models.Model):
     name = models.CharField(max_length=255)
     website = models.URLField(max_length=255, null=True, blank=True)
-    default_contact = models.ForeignKey('crm.Contact', null=True, related_name='+')
+    default_contact = models.ForeignKey('crm.Contact', null=True, related_name='+', on_delete=models.CASCADE)
     is_client = models.BooleanField(default=True)
     is_supplier = models.BooleanField(default=False)
     notes = models.TextField(blank=True, null=True)
@@ -25,7 +25,7 @@ class Company(models.Model):
 class Contact(models.Model):
     short_name = models.CharField(max_length=255, null=True, blank=True)
     long_name = models.CharField(max_length=255)
-    company = models.ForeignKey(Company, related_name='employees')
+    company = models.ForeignKey(Company, related_name='employees', on_delete=models.CASCADE)
 
     @property
     def default_mechanism(self):
@@ -39,7 +39,7 @@ class Contact(models.Model):
 
 
 class ContactMechanism(models.Model):
-    contact = models.ForeignKey(Contact, related_name='contactmechanisms')
+    contact = models.ForeignKey(Contact, related_name='contactmechanisms', on_delete=models.CASCADE)
     mechanism_type = models.CharField(max_length=6, choices=MECHANISM_CHOICES)
     value = models.CharField(max_length=255)
     position = models.PositiveSmallIntegerField(default=0)

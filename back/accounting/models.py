@@ -22,7 +22,7 @@ class Invoice(models.Model):
 
     date = models.DateField(auto_now_add=True)
     invoice_type = models.CharField(max_length=2, choices=INVOICE_TYPES)
-    related_party = models.ForeignKey(Company, related_name='invoices')
+    related_party = models.ForeignKey(Company, related_name='invoices', on_delete=models.CASCADE)
     state = models.CharField(max_length=5, choices=INVOICE_STATES)
 
     @property
@@ -44,8 +44,8 @@ class Invoice(models.Model):
 
 class InvoiceLine(models.Model):
 
-    invoice = models.ForeignKey(Invoice, related_name='lines')
-    product = models.ForeignKey(Product, related_name='+')
+    invoice = models.ForeignKey(Invoice, related_name='lines', on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, related_name='+', on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField()
     position = models.PositiveSmallIntegerField(default=0)
 

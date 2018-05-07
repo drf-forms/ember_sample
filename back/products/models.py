@@ -27,7 +27,7 @@ class Category(models.Model):
 class Product(models.Model):
 
     name = models.CharField(max_length=255)
-    category = models.ForeignKey(Category, related_name='products')
+    category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     sale_type = models.CharField(max_length=1, choices=PRODUCT_TYPE)
     period = models.CharField(max_length=2, choices=PERIODS, blank=True, null=True)
     price = models.DecimalField(max_digits=5, decimal_places=2)
