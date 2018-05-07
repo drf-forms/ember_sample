@@ -1,0 +1,15 @@
+& {
+  margin: $grid-gutter-width / 2;
+  display: flex;
+  flex-direction: row;
+
+  span.badge {
+    align-self: flex-start;
+    background-color: $brand-warning;
+    margin-left: - $grid-gutter-width / 4;
+  }
+
+  a {
+    color: mix(#f5dd5d, $brand-secondary);
+  }
+}

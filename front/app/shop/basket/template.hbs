@@ -1,0 +1,31 @@
+<ol class="breadcrumb home">
+  <li><a href={{href-to 'shop'}}>🏪 Sample webshop</a></li>
+  <li class="active">Basket</li>
+</ol>
+<div class="container">
+  <div class="col-sm-8 col-md-6">
+    {{#unless model.model.length}}
+      <h2>Your basket is empty</h2>
+    {{else}}
+      {{change-list
+        model=model.model
+        model_name='local/basket item'
+        fetchMeta=false
+        title='My basket'
+        fields=model.meta.fields
+        list_display=model.meta.list_display
+        list_editable=model.meta.list_editable
+        aggregates=model.meta.aggregates
+        allowBulk=false
+        showPagination=false
+        class="basket"
+      }}
+    {{/unless}}
+  </div>
+  <div class="col-sm-4 col-md-6 panel panel-warning">
+    <h3 class="text-warning">We are sorry but this is a sample shop and you cannot order.</h3>
+    <button class="btn btn-danger pull-right" {{action 'clearbasket'}}>Clear basket</button>
+    <div class="clearfix"></div>
+    <br/>
+  </div>
+</div>

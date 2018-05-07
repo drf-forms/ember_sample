@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+  <h2>{{model.name}}</h2>
+  <img src={{model.picture}} style="max-width: 100%;">
+  <br/><br/>
+  {{markdown-to-html model.description}}
+  <div class="col-xs-5">
+    {{form-number model=this property='qty' value=qty}}
+  </div> 
+  <div class="col-xs-7">
+    {{custom-action
+      act=(hash
+        type='closureMethod'
+        method='addToCart'
+        icon_class='fa fa-cart-plus'
+        text='Add to cart'
+      )
+      model=model
+      expanded=true
+      method=method
+      request=rqst
+      receiver=this
+      disabled=actionIsRunning
+      performing=performing
+    }}
+  </div> 
+  <div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>

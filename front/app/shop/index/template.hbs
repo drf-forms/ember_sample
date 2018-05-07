@@ -1,0 +1,39 @@
+<ol class="breadcrumb home">
+  <li class="active">🏪 Sample webshop</li>
+</ol>
+<div class="container">
+  {{#change-list
+    model_name='products/product'
+    label=model.model_name
+    app_name=model.app_name
+    fields=model.meta.fields
+    list_display=model.meta.list_display
+    filter_fields=model.meta.filter_fields
+    search_enabled=model.meta.search_enabled
+    custom_actions=model.meta.custom_actions
+    as |parent|
+  }}
+    {{#if parent.showFilters}}
+      {{list-filters
+        parent=parent
+      }}
+    {{/if}}
+    <div class="{{parent.inputClass}} {{parent.listClassName}} flex">
+      {{#liquid-if parent.model.isFulfilled}}
+        {{#each parent.model as |record|}}
+          {{product-card
+            model=record
+            receiver=parent
+            custom_actions=parent.custom_actions
+          }}
+        {{else}}
+          <p>Sorry, no results found</p>
+        {{/each}}
+      {{else}}
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">
+          <i class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
+      {{/liquid-if}}
+    </div>
+  {{/change-list}}
+</div>

@@ -107,3 +107,13 @@ footer > nav.navbar {
   margin-right: $grid-gutter-width;
   font-size: 275%;
 }
+
+.navbar-right > div {
+  display: inline-block;
+}
+
+@-moz-document url-prefix() {
+  .btn {
+    letter-spacing: -1px;
+  }
+}
