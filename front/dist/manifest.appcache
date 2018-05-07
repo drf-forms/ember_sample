@@ -1,0 +1,32 @@
+CACHE MANIFEST
+# created 2018-05-07T12:58:48.624Z
+
+CACHE:
+assets/djember-sample-82984a5b0a94fa027144226595729a33.css
+assets/djember-sample-c28bb220fefe5655153e922fd8bf7fb2.js
+assets/fonts/bootstrap/glyphicons-halflings-regular.eot
+assets/fonts/bootstrap/glyphicons-halflings-regular.svg
+assets/fonts/bootstrap/glyphicons-halflings-regular.ttf
+assets/fonts/bootstrap/glyphicons-halflings-regular.woff
+assets/fonts/bootstrap/glyphicons-halflings-regular.woff2
+assets/fonts/fontawesome/fontawesome-webfont.eot
+assets/fonts/fontawesome/fontawesome-webfont.svg
+assets/fonts/fontawesome/fontawesome-webfont.ttf
+assets/fonts/fontawesome/fontawesome-webfont.woff
+assets/fonts/fontawesome/fontawesome-webfont.woff2
+assets/fonts/fontawesome/FontAwesome.otf
+assets/images/flags16-3af314e44a47b60ee26701744a39e9c4.png
+assets/images/flags32-c7ab5313f94681ce98f8d41e1235d6b6.png
+assets/vendor-60b56cf86460547414061dfcf9269795.css
+assets/vendor-adcf0c4958f82d1c51fcbacfec843a2d.js
+crossdomain.xml
+ember-fetch/fastboot-fetch-805e176077930c98aec5834ae48bd0f2.js
+ember-world-flags/images/flags16-0b8915998d4be63d4e9c88d3d917300f.png
+ember-world-flags/images/flags32-d2965bbc5cb069a7380627c4062d4eb7.png
+robots.txt
+service-worker-e474e619eee43303f7250a10b259fa7b.js
+sw-toolbox-666b877cefc2f3d54ce1bb0f29a139ba.js
+/
+
+NETWORK:
+*
