@@ -8,7 +8,7 @@ django-filter==1.1.0
 django-jenkins==0.110.0
 djangorestframework==3.8.2
 drf-base64==0.9.4
-drf-schema-adapter==0.9.57
+drf-schema-adapter==0.9.61
 factory-boy==2.11.1
 Faker==0.8.13
 dnspython==1.15.0
