@@ -12,6 +12,6 @@ class ProductEndpoint(Endpoint):
     list_display = ['picture', 'name', 'category', 'sale_type', 'price' ]
     search_fields = ['name', ]
     filter_fields = ['category_id', ]
-
+    ordering_fields = ['name', ]
 
 router.register(Category)
